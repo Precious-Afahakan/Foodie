@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "react-toastify";
 import "./Meals.css";
 
 const MealList = () => {
@@ -27,7 +28,7 @@ const MealList = () => {
         setItems(mealsWithPrices);
       } catch (err) {
         console.log("ERROR:", err);
-        alert("Failed to fetch meals. Please try again later.");
+        toast("Failed to fetch meals. Please try again later.");
       }
     };
     fetchMeals();
@@ -78,7 +79,7 @@ const MealList = () => {
   };
 
   const handleCheckout = () => {
-    alert("Checkout Successful!, your cart has been cleared");
+    toast("Checkout Successful!, your cart has been cleared");
     setCart([]);
   };
 
