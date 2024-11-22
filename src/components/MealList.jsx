@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { toast } from "react-toastify";
-import "./MealList.css";
+import "./Meal.css";
 
 const MealList = () => {
   const [items, setItems] = useState([]);
